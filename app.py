@@ -10,11 +10,12 @@ from dotenv import load_dotenv
 
 load_dotenv()  # טוען את המשתנים מקובץ .env
 
+
 # הגדרות Shopify
 
 ACCESS_TOKEN = os.getenv("SHOPIFY_ACCESS_TOKEN")
 STORE_URL = 'chaplostyle.myshopify.com'
-API_VERSION = '2024-04'
+API_VERSION = ' 2025-04'
 HEADERS = {
     'X-Shopify-Access-Token': ACCESS_TOKEN,
     'Content-Type': 'application/json'
