@@ -1,8 +1,12 @@
 from flask import Flask, request, render_template_string, redirect, url_for
 import pandas as pd
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 import requests
 import os
 from dotenv import load_dotenv
+
+
 
 load_dotenv()  # טוען את המשתנים מקובץ .env
 
