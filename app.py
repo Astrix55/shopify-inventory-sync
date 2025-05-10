@@ -33,7 +33,7 @@ HTML = """
 # שליפת מיקום
 def get_location_id():
     url = f"https://{STORE_URL}/admin/api/{API_VERSION}/locations.json"
-    res = requests.get(url, headers=HEADERS)
+    res = requests.get(url, headers=HEADERS, verify=False)
     res.raise_for_status()
     return res.json()['locations'][0]['id']
 
@@ -86,7 +86,7 @@ def upload_file():
             "available": new_qty
         }
 
-        update_response = requests.post(update_url, headers=HEADERS, json=payload)
+        update_response = requests.post(url, headers=HEADERS, json=payload, verify=False)
         if update_response.status_code == 200:
             success_count += 1
         else:
