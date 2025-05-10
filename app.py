@@ -15,7 +15,7 @@ load_dotenv()  # טוען את המשתנים מקובץ .env
 
 ACCESS_TOKEN = os.getenv("SHOPIFY_ACCESS_TOKEN")
 STORE_URL = 'chaplostyle.myshopify.com'
-API_VERSION = ' 2025-04'
+API_VERSION ='2025-04'
 HEADERS = {
     'X-Shopify-Access-Token': ACCESS_TOKEN,
     'Content-Type': 'application/json'
